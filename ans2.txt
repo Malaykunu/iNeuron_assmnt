@@ -1,0 +1,30 @@
+Abstract classes ---- An abstract class is a class that cannot be instantiated. However, you can create classes that inherit from an abstract class.
+Python doesn’t directly support abstract classes. But it does offer a module that allows you to define abstract classes.
+To define an abstract class, we are using the abc (abstract base class) module.
+
+from abc import ABC
+class AbstractClassName(ABC):
+    pass
+
+Multiple inheritance ---- If a class inherits from two or more classes, we can say multiple inheritance.
+To extend multiple classes, we specify the parent classes inside the parentheses () after the class name of the child class like :
+
+class ChildClass(ParentClass1, ParentClass2, ParentClass3):
+   pass
+
+
+Decorator ----- Python has an interesting feature called decorators to add functionality to an existing code.
+This is also called metaprogramming because a part of the program tries to modify another part of the program at compile time.
+
+def outer_div(func):  
+    def inner(x,y):  
+        if(x<y):  
+           x,y = y,x  
+          return func(x,y)  
+     return inner  
+ 
+@outer_div  
+def divide(x,y):  
+     print(x/y)  
+
+
